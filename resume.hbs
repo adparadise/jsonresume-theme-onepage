@@ -75,18 +75,29 @@
     </div>
     <div class='sectionContent'>
       {{#each resume.work}}
-			<div class="jobBlock">
+	<div class="jobBlock">
 	      <div class='blockHeader'>
 	        <span class='title'>
-	          {{#if company}}{{company}}{{/if}}{{#if position}} - {{position}}{{/if}}
+	          {{#if company}}{{company}}{{/if}}
+                  {{#if website}} - <a href='{{website}}'>{{website}}</a>{{/if}}
 	        </span>
-	        {{#if startDate}}
 	        <span class='date'>
 	          {{#if startDate}}{{startDate}}{{/if}} &mdash; {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
 	        </span>
-	        {{/if}}
 	      </div>
-	      <div><a href='{{website}}'>{{website}}</a></div>
+              <div>{{description}}</div>
+              {{#each experiences}}
+                <div class="experience-item">
+                <span="">{{#if position}}{{position}}{{/if}}</span>
+	        {{#if startDate}}
+	        <span class='date'>
+	          {{#if startDate}}{{startDate}}{{/if}}{{#if endDate}} &mdash; {{endDate}}{{/if}}
+	        </span>
+	        {{/if}}
+                </div>
+                {{#if summary}}
+                <div>{{summary}}</div>
+                {{/if}}
 	      {{#if highlights.length}}
 	      <ul class='highlights'>
 	        {{#each highlights}}
@@ -101,6 +112,7 @@
 	        {{/each}}
 	      </ul>
 	      {{/if}}
+              {{/each}}
 	      {{#unless @last}}<div class='separator'></div>{{/unless}}
 			</div>
       {{/each}}

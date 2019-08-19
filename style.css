@@ -137,6 +137,11 @@ a {
   }
 }
 
+
+.experience-item {
+    display: list-item
+}
+
 @media print {
   body {
     background: #FFFFFF;
