@@ -1,6 +1,6 @@
 body {
   background: #EEEEEE;
-  font: 13px "Times New Roman", Times, sans-serif;
+  font: 12px "Roboto";
   line-height: 1.4;
   margin: 40px 0;
 }
@@ -22,8 +22,8 @@ a {
 
 #resume {
   margin: 0 auto;
-  max-width: 600px;
-  padding: 80px 100px;
+  max-width: 700px;
+  padding: 35px 50px;
   background: #fff;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 4px #aaa;
@@ -37,7 +37,8 @@ a {
 }
 
 .largeFont {
-  font-size: 20px;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .smallFont {
@@ -55,36 +56,51 @@ a {
   display: inline-block;
 }
 
+.experienceBlock .sectionName {
+    width: 20%;
+}
+
 .sectionContent {
   width: 80%;
   vertical-align: top;
   display: inline-block;
 }
 
+.experienceBlock .sectionContent {
+    width: 78%;
+}
+
 .sectionContent ul {
-  padding-left: 20px;
-  margin-top: 6px;
+  padding-left: 11.5px;
+  margin-top: 3px;
   list-style-type: circle;
+  margin-bottom: 5px;
 }
 
 .sectionContent .title {
-  font-weight: bold;
+    font-weight: bold;
+    font-size: 12.5px;
 }
 
 .sectionContent .date {
-  float: right;
+    float: right;
+    font-weight: normal;
 }
 
 .sectionContent .separator {
   height: 14px;
 }
 
+#nameBlock .label {
+    font-weight: 400;
+}
+
 .sectionLine {
   border-style: dashed;
-  border-width: 1px;
-  border-color: #CFCFCF;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border-width: 0.5px;
+  border-color: #eee;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .divider {
@@ -102,8 +118,22 @@ a {
 }
 
 .jobBlock {
-  page-break-inside: avoid;
+    page-break-inside: avoid;
 }
+
+.jobBlock > .highlights li {
+    list-style-type: disc;
+}
+
+a:visited,
+a:link {
+    color: #555;
+}
+
+.position {
+    font-weight: 500;
+}
+
 
 /* Media Queries */
 @media only screen and (max-width: 40em) {
@@ -137,9 +167,9 @@ a {
   }
 }
 
-
-.experience-item {
-    display: list-item
+.experienceLabel {
+    margin-top: 5px;
+    font-size: 13px;
 }
 
 @media print {
@@ -154,9 +184,5 @@ a {
     background: #fff;
     box-shadow: none;
     -webkit-box-shadow: none;
-  }
-
-  a {
-    color: black;
   }
 }
