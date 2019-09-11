@@ -46,7 +46,8 @@ a {
 }
 
 .coursesList .course {
-    display: inline-block;
+    display: inline;
+    margin-left: 0px;
 }
 .coursesList .course:after {
     content: ', ';
