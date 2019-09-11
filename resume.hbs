@@ -297,13 +297,14 @@
         </div>
         {{#if courses.length}}
         <div id='coursesBlock'>
-          {{#each courses}}
+          <span class="title">Courses:</span>
           <ul class='coursesList'>
-            {{#each .}}
-            <li class='course'>{{.}}</li>
+            {{#each courses}}
+              {{#each .}}
+                <li class='course'>{{.}}</li>
+              {{/each}}
             {{/each}}
           </ul>
-          {{/each}}
         </div>
         {{/if}}
       </div>
@@ -350,8 +351,7 @@
       -->{{#unless @last}}<span>, </span>{{/unless}}
       {{/each}}
     </div>
-    <div class='sectionLine'></div>
-        </div>
+  </div>
   {{/if}}
 
         </body>

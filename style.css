@@ -1,8 +1,8 @@
 body {
-  background: #EEEEEE;
+  background: #FFFFFF;
   font: 12px "Roboto";
   line-height: 1.4;
-  margin: 40px 0;
+  margin: 0px 0;
 }
 em {
   color: #999;
@@ -14,7 +14,8 @@ ul {
   margin-bottom: 0;
 }
 li {
-  margin-bottom: 2px;
+    margin-bottom: 2px;
+    margin-left: 0.9em;
 }
 a {
   text-decoration: none;
@@ -23,17 +24,31 @@ a {
 #resume {
   margin: 0 auto;
   max-width: 700px;
-  padding: 35px 50px;
+  padding: 0.5em 1em;
+  border: 0px;
   background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 4px #aaa;
-  -webkit-box-shadow: 2px 2px 4px #aaa;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.coursesBlock .title {
+    font-weight: normal;
 }
 
 .coursesList {
-  width: 28%;
-  vertical-align: top;
   display: inline-block;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+
+.coursesList .course {
+    display: inline-block;
+}
+.coursesList .course:after {
+    content: ', ';
+}
+.coursesList .course:last-child:after {
+    content: '';
 }
 
 .largeFont {
@@ -46,28 +61,26 @@ a {
 }
 
 .sectionBlock {
-  display: flex;
   width: 100%;
 }
 
 .sectionName {
-  width: 18%;
+  width: auto;
   vertical-align: top;
-  display: inline-block;
-}
-
-.experienceBlock .sectionName {
-    width: 20%;
+  display: block;
 }
 
 .sectionContent {
-  width: 80%;
   vertical-align: top;
-  display: inline-block;
 }
 
 .experienceBlock .sectionContent {
-    width: 78%;
+    padding-left: 10px;
+}
+
+.experienceBlock .position {
+    font-weight: normal;
+    text-decoration: underline;
 }
 
 .sectionContent ul {
@@ -96,11 +109,8 @@ a {
 }
 
 .sectionLine {
-  border-style: dashed;
-  border-width: 0.5px;
-  border-color: #eee;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .divider {
@@ -135,54 +145,11 @@ a:link {
 }
 
 
-/* Media Queries */
-@media only screen and (max-width: 40em) {
-  body {
-    margin: 0;
-    font-size: 14px;
-  }
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0.5em 1em;
-    border: none;
-  }
-  .sectionBlock {
-    flex-direction: column;
-  }
-  .sectionContent {
-    width: 100%;
-  }
-  .sectionContent .date {
-    padding-right: 2em;
-  }
-  .sectionName {
-    width: auto;
-  }
-  .largeFont {
-    font-size: 20px;
-  }
-  .smallFont {
-    font-size: 14px;
-  }
-}
-
 .experienceLabel {
     margin-top: 5px;
     font-size: 13px;
 }
 
-@media print {
-  body {
-    background: #FFFFFF;
-  }
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0px 0px;
-    border: 0px;
-    background: #fff;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-  }
+@page {
+    margin-top: 2em;
 }
