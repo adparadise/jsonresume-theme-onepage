@@ -1,6 +1,6 @@
 body {
   background: #FFFFFF;
-  font: 12px "Roboto";
+  font: 13px "Roboto";
   line-height: 1.4;
   margin: 0px 0;
 }
@@ -29,6 +29,10 @@ a {
   background: #fff;
   box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+#education {
+    margin-top: 3em;
 }
 
 .coursesBlock .title {
